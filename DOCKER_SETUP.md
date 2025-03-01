@@ -17,13 +17,7 @@ This guide will help you set up and run the GhoulStickerVault Discord bot using 
    cd GhoulStickerVault
    ```
 
-2. **Create a data directory for the database**
-
-   ```bash
-   mkdir -p data
-   ```
-
-3. **Create a .env file with your Discord bot credentials**
+2. **Create a .env file with your Discord bot credentials**
 
    ```bash
    cp .env.example .env
@@ -32,7 +26,7 @@ This guide will help you set up and run the GhoulStickerVault Discord bot using 
 
    Fill in your bot token, client ID, and other configuration options.
 
-4. **Build and start the Docker container**
+3. **Build and start the Docker container**
 
    ```bash
    docker-compose up -d
@@ -40,13 +34,13 @@ This guide will help you set up and run the GhoulStickerVault Discord bot using 
 
    This will build the Docker image and start the container in detached mode.
 
-5. **Deploy slash commands (first time setup)**
+4. **Deploy slash commands (first time setup)**
 
    ```bash
    docker-compose exec discord-bot npm run deploy
    ```
 
-6. **Check the logs**
+5. **Check the logs**
 
    ```bash
    docker-compose logs -f
@@ -76,7 +70,7 @@ This guide will help you set up and run the GhoulStickerVault Discord bot using 
 
 ## Database Management
 
-The SQLite database is stored in the `./data` directory on your host machine, which is mounted as a volume in the Docker container. This ensures that your data persists even if the container is removed or rebuilt.
+The SQLite database (stickers.db) is stored in the root directory of your project on your host machine and is mounted as a volume in the Docker container. This ensures that your data persists even if the container is removed or rebuilt.
 
 ## Troubleshooting
 
