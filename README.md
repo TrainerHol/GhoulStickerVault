@@ -78,14 +78,6 @@ Sends a sticker from the vault.
 After adding a sticker, you can use it directly with a slash command of the same name.
 For example, if you added a sticker named "cat", you can use it with `/cat`.
 
-## Error Handling
-
-The bot includes comprehensive error handling to prevent crashes and provide helpful error messages to users. All database operations and Discord API interactions are wrapped in try-catch blocks to ensure stability.
-
 ## License
 
 MIT
-
-## Support
-
-If you encounter any issues or have questions, please open an issue on GitHub or contact the developer.
