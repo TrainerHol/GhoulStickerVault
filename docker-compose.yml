@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  discord-bot:
+    build: .
+    container_name: ghoul-sticker-vault
+    restart: unless-stopped
+    volumes:
+      - ./data:/app/data
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - CLIENT_ID=${CLIENT_ID}
+      - DB_PATH=/app/data/stickers.db
+      - USE_WEBHOOKS=${USE_WEBHOOKS:-true}
+      - USE_GLOBAL_COMMANDS=${USE_GLOBAL_COMMANDS:-false}
+      - GUILD_ID=${GUILD_ID:-}
