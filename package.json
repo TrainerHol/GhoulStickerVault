@@ -1,0 +1,31 @@
+{
+  "name": "ghoulstickervault",
+  "version": "1.0.0",
+  "description": "A Discord bot that allows users to add stickers/GIFs to a database and use them via slash commands",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "deploy": "node deploy-commands.js",
+    "dev": "nodemon index.js",
+    "migrate": "node migrate-stickers.js"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "stickers",
+    "gifs",
+    "discord.js"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/builders": "^1.6.5",
+    "@discordjs/rest": "^2.0.1",
+    "better-sqlite3": "^8.0.1",
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1"
+  },
+  "engines": {
+    "node": ">=16.9.0"
+  }
+}
